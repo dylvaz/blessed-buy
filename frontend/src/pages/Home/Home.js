@@ -1,9 +1,18 @@
+import Product from '../Product/Product';
 import './Home.css';
 
 const Home = () => {
   return (
     <div className='home-page'>
-      <h1>Hello from Home</h1>
+      <h2 className='homepage-title'>Latest Products</h2>
+      <div className='homepage-products'>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+      </div>
     </div>
   );
 };

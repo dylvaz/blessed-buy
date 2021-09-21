@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ setSideToggle }) => {
   return (
     <nav className='navbar'>
       {/* logo */}
       <div className='navbar-logo'>
-        <h2>Blessed Buy</h2>
+        <Link to='/'>
+          <h2>Blessed Buy</h2>
+        </Link>
       </div>
       <ul className='navbar-links'>
         <li>
           <Link to='/cart' className='cart-link'>
-            <i className=' fas fa-shopping-cart'></i>
+            <i className='fas fa-shopping-cart'></i>
             <span>
               Cart
               <span className='cart-count'>0</span>
@@ -22,7 +24,7 @@ const Navbar = () => {
           <Link to='/'>Shop</Link>
         </li>
       </ul>
-      <div className='hamburger-menu'>
+      <div className='hamburger-menu' onClick={setSideToggle}>
         <div></div>
         <div></div>
         <div></div>
