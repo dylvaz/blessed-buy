@@ -47,14 +47,14 @@ const ProductPage = () => {
           </div>
           <div className='left-info'>
             <p className='left-name'>{name}</p>
-            <p>Price: ${price}.99</p>
+            <p>Price: ${price}.00</p>
             <p>{description}</p>
           </div>
         </div>
         <div className='product-page-right'>
           <div className='right-info'>
             <p>
-              Price: <span> ${price}.99</span>
+              Price: <span> ${price}.00</span>
             </p>
             <p>
               Status:

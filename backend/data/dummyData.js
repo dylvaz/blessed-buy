@@ -53,6 +53,24 @@ const dummyData = [
     price: 140,
     countInStock: 10,
   },
+  {
+    name: 'NVIDIA GeForce RTX 2080',
+    imageUrl:
+      'https://images.unsplash.com/photo-1591405351990-4726e331f141?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80',
+    description:
+      'The GeForce RTX™ 2080 is powered by the NVIDIA Turing™ architecture to give you incredible new levels of gaming realism, speed, power efficiency, and immersion. This is graphics reinvented.',
+    price: 300,
+    countInStock: 13,
+  },
+  {
+    name: 'Apple AirPods Pro',
+    imageUrl:
+      'https://images.unsplash.com/photo-1603680373177-e762186bdc3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YWlyJTIwcG9kc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    description:
+      'AirPods Pro have been designed to deliver Active Noise Cancellation for immersive sound, Transparency mode so you can hear your surroundings, and a customizable fit for all-day comfort. Just like AirPods, AirPods Pro connect magically to your iPhone or Apple Watch. And they’re ready to use right out of the case.',
+    price: 249,
+    countInStock: 7,
+  },
 ];
 
 module.exports = dummyData;

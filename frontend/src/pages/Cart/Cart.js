@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { GetCartCountHook } from '../../util/getCartCount';
 import CartItem from '../../components/CartItem/CartItem';
@@ -10,8 +10,9 @@ import './Cart.css';
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  const history = useHistory();
 
-  const { cartItems } = cart;
+  let { cartItems } = cart;
   const [cartCount] = GetCartCountHook();
 
   const quantityChangeHandler = (id, qty) => {
@@ -59,7 +60,15 @@ const Cart = () => {
           <p>${getSubtotal()}.00</p>
         </div>
         <div>
-          <button>Proceed to Checkout</button>
+          <button
+            onClick={() => {
+              localStorage.removeItem('cart');
+              history.push('/');
+              window.location.reload();
+            }}
+          >
+            Proceed to Checkout
+          </button>
         </div>
       </div>
     </div>
