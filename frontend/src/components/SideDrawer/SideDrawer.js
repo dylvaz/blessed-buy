@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 
+import { GetCartCountHook } from '../../util/getCartCount';
+
 import './SideDrawer.css';
 
 const SideDrawer = ({ setSideToggle, show }) => {
+  const [cartCount] = GetCartCountHook();
   const sideDrawerClass = ['sidedrawer'];
   if (show) {
     sideDrawerClass.push('show');
@@ -16,7 +19,7 @@ const SideDrawer = ({ setSideToggle, show }) => {
             <i className='fas fa-shopping-cart'></i>
             <span>
               Cart
-              <span className='sidedrawer-cart-count'>0</span>
+              <span className='sidedrawer-cart-count'>{cartCount}</span>
             </span>
           </Link>
         </li>

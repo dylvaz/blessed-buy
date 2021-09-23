@@ -6,7 +6,7 @@ export const getProducts = () => async (dispatch) => {
       type: actionTypes.GET_PRODUCTS_REQUEST,
     });
 
-    const data = await fetch('http://localhost:7654/api/products');
+    const data = await fetch('api/products').then((res) => res.json());
 
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,
@@ -15,18 +15,21 @@ export const getProducts = () => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: actionTypes.GET_PRODUCTS_FAIL,
-      payload: err,
+      payload:
+        err.response && err.response.data.message
+          ? err.response.data.message
+          : err.message,
     });
   }
 };
 
-export const getProductsDetails = (id) => async (dispatch) => {
+export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({
       type: actionTypes.GET_PRODUCT_DETAILS_REQUEST,
     });
 
-    const data = await fetch(`http://localhost:7654/api/products/${id}`);
+    const data = await fetch(`/api/products/${id}`).then((res) => res.json());
 
     dispatch({
       type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
@@ -35,7 +38,10 @@ export const getProductsDetails = (id) => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: actionTypes.GET_PRODUCT_DETAILS_FAIL,
-      payload: err,
+      payload:
+        err.response && err.response.data.message
+          ? err.response.data.message
+          : err.message,
     });
   }
 };

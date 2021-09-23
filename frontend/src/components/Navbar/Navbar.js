@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+
+import { GetCartCountHook } from '../../util/getCartCount';
 import './Navbar.css';
 
 const Navbar = ({ setSideToggle }) => {
+  const [cartCount] = GetCartCountHook();
   return (
     <nav className='navbar'>
-      {/* logo */}
       <div className='navbar-logo'>
         <Link to='/'>
           <h2>Blessed Buy</h2>
@@ -16,7 +18,7 @@ const Navbar = ({ setSideToggle }) => {
             <i className='fas fa-shopping-cart'></i>
             <span>
               Cart
-              <span className='cart-count'>0</span>
+              <span className='cart-count'>{cartCount}</span>
             </span>
           </Link>
         </li>

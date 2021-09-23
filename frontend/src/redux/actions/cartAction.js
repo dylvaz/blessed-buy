@@ -1,13 +1,13 @@
 import * as actionTypes from '../constants/cartConstants';
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-  const data = await fetch(`http://localhost:7654/api/products/${id}`);
-  const { product, name, imageUrl, price, countInStock } = data;
+  const data = await fetch(`/api/products/${id}`).then((res) => res.json());
+  const { _id, name, imageUrl, price, countInStock } = data;
 
   dispatch({
     type: actionTypes.ADD_TO_CART,
     payload: {
-      product,
+      _id,
       name,
       imageUrl,
       price,

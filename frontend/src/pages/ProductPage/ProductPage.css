@@ -64,6 +64,14 @@
   border: 1px solid #171717;
   cursor: pointer;
 }
+.right-info > p > button:disabled {
+  grid-column: 1/-1;
+  padding: 10px 16px;
+  background: rgba(23, 23, 23, 0.5);
+  color: #f4f4f4;
+  border: 1px solid #171717;
+  cursor: default;
+}
 .right-info select {
   padding: 10px 16px;
 }
