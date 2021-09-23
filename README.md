@@ -5,7 +5,7 @@ Blessed Buy is the place where everything is in stock! This application is an im
 Demo gif of UI:
 ![Blessed Buy UI](./frontend/src/assets/blessedBuyVid2.gif)
 
-### Starting the Server
+## Starting the Server
 
 Navigate to the root of the project
 
@@ -20,9 +20,9 @@ run\
 `yarn install`\
 `yarn server`
 
-### Starting the Frontend
+## Starting the Frontend
 
-Navigate to the into frontend
+Navigate to into frontend
 
 run\
 `yarn install`
@@ -34,7 +34,7 @@ In package.json add a proxy key with the value set to the url of your backend yo
 run\
 `yarn client`
 
-#### Starting Both Server and Frontend Concurrently
+## Starting Both Server and Frontend Concurrently
 
 Be sure to have ran `yarn install` in both the root and frontend directory.
 
