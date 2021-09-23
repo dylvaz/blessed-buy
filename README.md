@@ -2,7 +2,7 @@
 
 Blessed Buy is the place where everything is in stock! This application is an implementation of creating a full-stack eCommerce shopping cart. The UI utilizes React.js and is built to be mobile friendly. All styling is done from scratch using CSS. The backend API is set up using Express.js and MongoDB. The state is persisted by utilizing the local storage so if a user returns to the page their items will still be in their cart. Redux is used to centralize state. Actions are dispatched when a user adds or removes items from their cart, and when the client interacts with the server to get products or product information. More is to be completed as there is still the option of deploying live, create sign-up and sign-in functionality, and add checkout logic. The application was built with the MERN Stack. 🔥
 
-Demo image of UI:
+Demo gif of UI:
 ![Blessed Buy UI](./frontend/src/assets/blessedBuyVid.gif)
 
 ### Starting the Server
