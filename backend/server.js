@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const morgan = require('morgan');
 
 const app = express();
 
@@ -9,7 +8,11 @@ const productRoutes = require('./routes/productRoutes');
 
 const PORT = process.env.PORT || 7654;
 
-app.use(morgan('dev'));
+// Conditionally include morgan only in development mode
+if (process.env.NODE_ENV === 'development') {
+  const morgan = require('morgan');
+  app.use(morgan('dev'));
+}
 
 connectDB();
 
