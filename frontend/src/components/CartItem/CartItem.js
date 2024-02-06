@@ -9,15 +9,11 @@ const CartItem = ({ item, quantityChangeHandler, removeFromCartHandler }) => {
       <div className='cart-item-image'>
         <img src={imageUrl} alt={name} />
       </div>
-      <Link to={`/product/${_id}`} className='cart-item-name'>
+      <Link to={`/blessed-buy/product/${_id}`} className='cart-item-name'>
         <p>{name}</p>
       </Link>
       <p className='cart-item-price'>${price * qty}.00</p>
-      <select
-        className='cart-item-select'
-        value={qty}
-        onChange={(e) => quantityChangeHandler(_id, e.target.value)}
-      >
+      <select className='cart-item-select' value={qty} onChange={(e) => quantityChangeHandler(_id, e.target.value)}>
         {[...Array(countInStock).keys()].map((x) => {
           return (
             <option key={x} value={x + 1}>
@@ -26,10 +22,7 @@ const CartItem = ({ item, quantityChangeHandler, removeFromCartHandler }) => {
           );
         })}
       </select>
-      <button
-        className='cart-item-delete-button'
-        onClick={() => removeFromCartHandler(_id)}
-      >
+      <button className='cart-item-delete-button' onClick={() => removeFromCartHandler(_id)}>
         <i className='fas fa-trash'></i>
       </button>
     </div>

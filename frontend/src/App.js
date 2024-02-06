@@ -27,9 +27,9 @@ const App = () => {
       <Backdrop setSideToggle={setSideToggleCallback} show={sideToggle} />
       <main>
         <Switch>
-          <Route path={'/' || '/blessed-buy'} component={Home} />
-          <Route exact path='/product/:id' component={ProductPage} />
-          <Route exact path='/cart' component={Cart} />
+          <Route exact path='/blessed-buy' component={Home} />
+          <Route exact path='/blessed-buy/product/:id' component={ProductPage} />
+          <Route exact path='/blessed-buy/cart' component={Cart} />
         </Switch>
       </main>
     </Router>

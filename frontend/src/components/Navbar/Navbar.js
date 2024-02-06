@@ -8,13 +8,13 @@ const Navbar = ({ setSideToggle }) => {
   return (
     <nav className='navbar'>
       <div className='navbar-logo'>
-        <Link to='/'>
+        <Link to='/blessed-buy'>
           <h2>Blessed Buy</h2>
         </Link>
       </div>
       <ul className='navbar-links'>
         <li>
-          <Link to='/cart' className='cart-link'>
+          <Link to='/blessed-buy/cart' className='cart-link'>
             <i className='fas fa-shopping-cart'></i>
             <span>
               Cart
@@ -23,7 +23,7 @@ const Navbar = ({ setSideToggle }) => {
           </Link>
         </li>
         <li>
-          <Link to='/'>Shop</Link>
+          <Link to='/blessed-buy'>Shop</Link>
         </li>
       </ul>
       <div className='hamburger-menu' onClick={setSideToggle}>

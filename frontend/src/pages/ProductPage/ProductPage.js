@@ -25,7 +25,7 @@ const ProductPage = () => {
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, qty));
-    history.push('/cart');
+    history.push('/blessed-buy/cart');
   };
 
   // conditional rendering for the three states of error, loading, and success
@@ -74,11 +74,7 @@ const ProductPage = () => {
               </select>
             </p>
             <p>
-              <button
-                type='button'
-                disabled={countInStock <= 0}
-                onClick={addToCartHandler}
-              >
+              <button type='button' disabled={countInStock <= 0} onClick={addToCartHandler}>
                 Add to Cart
               </button>
             </p>

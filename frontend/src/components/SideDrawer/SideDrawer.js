@@ -15,7 +15,7 @@ const SideDrawer = ({ setSideToggle, show }) => {
     <div className={sideDrawerClass.join(' ')}>
       <ul className='sidedrawer-links' onClick={setSideToggle}>
         <li>
-          <Link to='/cart'>
+          <Link to='/blessed-buy/cart'>
             <i className='fas fa-shopping-cart'></i>
             <span>
               Cart
@@ -24,7 +24,7 @@ const SideDrawer = ({ setSideToggle, show }) => {
           </Link>
         </li>
         <li>
-          <Link to='/'>Shop</Link>
+          <Link to='/blessed-buy'>Shop</Link>
         </li>
       </ul>
     </div>

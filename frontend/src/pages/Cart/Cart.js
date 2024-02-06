@@ -24,10 +24,7 @@ const Cart = () => {
   };
 
   const getSubtotal = () => {
-    return cartItems.reduce(
-      (price, item) => Number(item.qty) * item.price + price,
-      0
-    );
+    return cartItems.reduce((price, item) => Number(item.qty) * item.price + price, 0);
   };
 
   return (
@@ -37,7 +34,7 @@ const Cart = () => {
         {cartItems.length === 0 ? (
           <div>
             Your cart is empty
-            <Link to='/'> Go Back</Link>
+            <Link to='/blessed-buy'> Go Back</Link>
           </div>
         ) : (
           cartItems.map((item, index) => {
@@ -63,7 +60,7 @@ const Cart = () => {
           <button
             onClick={() => {
               localStorage.removeItem('cart');
-              history.push('/');
+              history.push('/blessed-buy');
               window.location.reload();
             }}
           >

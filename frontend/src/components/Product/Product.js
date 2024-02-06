@@ -10,13 +10,11 @@ const Product = ({ product }) => {
       <div className='product-info'>
         <p className='info-name'>{name}</p>
         <p className='info-description'>
-          {description.length > 100
-            ? description.substring(0, 100) + '...'
-            : description}
+          {description.length > 100 ? description.substring(0, 100) + '...' : description}
         </p>
         <p className='info-price'>${price}.00</p>
 
-        <Link to={`/product/${_id}`} className='info-button'>
+        <Link to={`/blessed-buy/product/${_id}`} className='info-button'>
           View
         </Link>
       </div>
