@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/blessed-buy/static/css/main.d6a1defc.css",
-    "main.js": "/blessed-buy/static/js/main.c8d5f32c.js",
+    "main.js": "/blessed-buy/static/js/main.13fb6013.js",
     "index.html": "/blessed-buy/index.html",
     "main.d6a1defc.css.map": "/blessed-buy/static/css/main.d6a1defc.css.map",
-    "main.c8d5f32c.js.map": "/blessed-buy/static/js/main.c8d5f32c.js.map"
+    "main.13fb6013.js.map": "/blessed-buy/static/js/main.13fb6013.js.map"
   },
   "entrypoints": [
     "static/css/main.d6a1defc.css",
-    "static/js/main.c8d5f32c.js"
+    "static/js/main.13fb6013.js"
   ]
 }
