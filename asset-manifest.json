@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blessed-buy/static/css/main.d6a1defc.css",
+    "main.js": "/blessed-buy/static/js/main.e2e467c7.js",
+    "index.html": "/blessed-buy/index.html",
+    "main.d6a1defc.css.map": "/blessed-buy/static/css/main.d6a1defc.css.map",
+    "main.e2e467c7.js.map": "/blessed-buy/static/js/main.e2e467c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6a1defc.css",
+    "static/js/main.e2e467c7.js"
+  ]
+}
