@@ -1,7 +1,9 @@
 import * as actionTypes from '../constants/cartConstants';
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-  const data = await fetch(`/api/products/${id}`).then((res) => res.json());
+  const data = await fetch(`https://blessed-buy-backend-450c1a771062.herokuapp.com/api/products/${id}`).then((res) =>
+    res.json()
+  );
   const { _id, name, imageUrl, price, countInStock } = data;
 
   dispatch({

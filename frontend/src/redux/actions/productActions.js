@@ -6,7 +6,9 @@ export const getProducts = () => async (dispatch) => {
       type: actionTypes.GET_PRODUCTS_REQUEST,
     });
 
-    const data = await fetch('api/products').then((res) => res.json());
+    const data = await fetch('https://blessed-buy-backend-450c1a771062.herokuapp.com/api/products').then((res) =>
+      res.json()
+    );
 
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,
@@ -15,10 +17,7 @@ export const getProducts = () => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: actionTypes.GET_PRODUCTS_FAIL,
-      payload:
-        err.response && err.response.data.message
-          ? err.response.data.message
-          : err.message,
+      payload: err.response && err.response.data.message ? err.response.data.message : err.message,
     });
   }
 };
@@ -29,7 +28,9 @@ export const getProductDetails = (id) => async (dispatch) => {
       type: actionTypes.GET_PRODUCT_DETAILS_REQUEST,
     });
 
-    const data = await fetch(`/api/products/${id}`).then((res) => res.json());
+    const data = await fetch(`https://blessed-buy-backend-450c1a771062.herokuapp.com/api/products/${id}`).then((res) =>
+      res.json()
+    );
 
     dispatch({
       type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
@@ -38,10 +39,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: actionTypes.GET_PRODUCT_DETAILS_FAIL,
-      payload:
-        err.response && err.response.data.message
-          ? err.response.data.message
-          : err.message,
+      payload: err.response && err.response.data.message ? err.response.data.message : err.message,
     });
   }
 };
