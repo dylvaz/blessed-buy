@@ -20,7 +20,7 @@ const Home = () => {
   if (loading) {
     homeUI = <h2>Loading...</h2>;
   } else if (error) {
-    homeUI = <h2>{error}</h2>;
+    homeUI = <h2>{console.log(error)}</h2>;
   } else {
     homeUI = products.map((product, index) => {
       return <Product key={index} product={product} />;
