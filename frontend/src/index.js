@@ -1,5 +1,5 @@
 import React from 'react';
-import dotenv from 'dotenv';
+import 'dotenv/config';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import { HashRouter } from 'react-router-dom';
